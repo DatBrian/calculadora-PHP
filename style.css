@@ -20,7 +20,6 @@ html {
 	background: url(img/fondo.jpeg	);
 	background-size: cover;
 	overflow: hidden;
-	background-position-y: -108px;
 	background-repeat: no-repeat;
 	background-attachment: fixed;
 }
