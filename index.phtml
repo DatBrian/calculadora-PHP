@@ -4,14 +4,14 @@
 <head>
 	<meta charset="UTF-8">
 	<title>Calculadora</title>
-	<link rel="stylesheet" type="text/css" href="style.css">
+	<link rel="stylesheet" type="text/css" href="./style/style.css">
 </head>
 
 <body>
 	<main>
 		<h1 id="titulo">La calculadora de Brian :D</h1>
 		<form action="api.php" method="post">
-			<input type="text" id="op1" name="num1" placeholder="Operador 1" required>
+			<input type="text" id="op1" name=" num1" placeholder="Operador 1" required>
 			<select name="op" id="ope">
 				<option disabled>+,-,x,/</option>
 				<option value="+">+</option>
@@ -26,11 +26,11 @@
 		<p id="resultado">
 			RESULTADO:
 			<?php
-			$resultado = $_GET['res'] ?? '';
+			$res = $_GET['res'] ?? '';
 
-			if (!empty($resultado)) {
-				echo htmlspecialchars($resultado);
-			}
+			echo (!empty($res)) ? htmlspecialchars($res)
+				: 'Sin resultados';
+
 			?>
 		</p>
 	</main>
