@@ -12,9 +12,9 @@ trait validaciones
         return is_numeric($num1) && is_numeric($num2);
     }
 
-    public static function validarDivisorNoCero($num2)
+    public static function validarDivisores($num)
     {
-        return $num2 != 0;
+        return ($num != "0") ? true : false;
     }
 
     public static function validarDatosPresentes($data, $keys)
