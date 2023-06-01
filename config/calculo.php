@@ -4,6 +4,7 @@ require __DIR__ . '/traits.php';
 class calculo
 {
     use validaciones;
+    
     public static function calcular($data)
     {
 
@@ -20,7 +21,7 @@ class calculo
         $res =
             match ($operacion) {
                 "+" => $num1 + $num2,
-                "-" => $num1 - $num2,
+                "--" => $num1 - $num2,
                 "*" => $num1 * $num2,
                 "/" => $num1 / $num2,
                 default => "Operación no válida"
